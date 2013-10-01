@@ -7,7 +7,7 @@ package com.mk.solutions;
  * 
  * @author
  */
-public class JavaCloneTest
+public class JavaCloneRectangleTest
 {
 
 	public static void main(String args[])
