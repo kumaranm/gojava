@@ -5,10 +5,10 @@ import java.util.List;
 
 import com.mk.problem.as.ScheduleCalculator;
 import com.mk.problem.as.Validator;
+import com.mk.problem.as.common.Constants;
 import com.mk.problem.as.common.PrintUtility;
 import com.mk.problem.as.pojo.Loan;
 import com.mk.problem.as.pojo.PaymentSchedule;
-import com.mk.problem.test1.AmortizationScheduleConstants;
 
 /**
  * This class is responsible for calculating of the Amortization Schedule
@@ -52,7 +52,7 @@ public class AmortizationScheduleCalculator extends ScheduleCalculator
 	 */
 	private double getMonthlyInterest(Loan loan)
 	{
-		return loan.getPercent() / AmortizationScheduleConstants.MONTHLY_INTEREST_DIVISOR;
+		return loan.getPercent() / Constants.MONTHLY_INTEREST_DIVISOR;
 	}
 
 	/**
