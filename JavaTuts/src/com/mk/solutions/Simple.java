@@ -22,7 +22,7 @@ class Simple
 		String s2 = "Rakesh";
 		String s3 = "Rakesh".intern();
 		String s4 = new String("Rakesh");
-		String s5 = s4.intern();
+		String s5 = new String("Rakesh").intern();
 		String s6 = new String("Rakesh");
 
 		if ( s1 == s2 ){
