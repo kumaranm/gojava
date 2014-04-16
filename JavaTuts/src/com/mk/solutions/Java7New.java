@@ -5,6 +5,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -113,6 +117,18 @@ public class Java7New {
 		// java.nio.file package provide comprehensive support for file
 		// I/O and for accessing the default file system
 
+		String content = "Hello Java Code Geeks";
+		byte[] bytes = content.getBytes();
+		Path filepath = Paths.get("");
+		try (OutputStream out = Files.newOutputStream(filepath))
+		{
+			out.write(bytes);
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+
+		
 		// -----------------
 		// New Garbage Collector G1 - Garbage First
 		// provides clean up where there is most garbage
