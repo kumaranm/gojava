@@ -16,8 +16,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="jars/lucene-core-4.7.0.jar"/>
-	<classpathentry kind="lib" path="jars/lucene-queryparser-4.7.0.jar"/>
-	<classpathentry kind="lib" path="jars/lucene-analyzers-common-4.7.0.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/jars"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

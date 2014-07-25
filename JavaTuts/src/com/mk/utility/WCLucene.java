@@ -1,7 +1,6 @@
 package com.mk.utility;
 import java.io.IOException;
 
-import org.apache.lucene.analysis.ru.RussianAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -25,27 +24,18 @@ public class WCLucene {
   public static void main(String[] args) throws IOException, ParseException {
     // 0. Specify the analyzer for tokenizing text.
     //    The same analyzer should be used for indexing and searching
-//    StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_43);
-    RussianAnalyzer analyzer = new RussianAnalyzer(Version.LUCENE_43);
+    StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_43);
     // 1. create the index
     Directory index = new RAMDirectory();
 
     IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_43, analyzer);
 
     IndexWriter w = new IndexWriter(index, config);
-    addDoc(w, "ОСМАЕВ АДАМ ЖАМАЛАЙЛОВИЧ ", "193398817");
-    addDoc(w, "АДАМ,ЖАМАЛАЙЛОВИЧ ОСМАЕВ", "55320055Z");
-    addDoc(w, "АДАМ,ОСМАЕВ,ЖАМАЛАЙЛОВИЧ", "55063554A");
-    addDoc(w, "ЖАМАЛАЙЛОВИЧ АДАМ,ОСМАЕВ", "99003333");
-    addDoc(w, "ЖАМАЛАЙЛОВИЧ АДАМ", "9900333e");
-    addDoc(w, "ЖАМАЛАЙЛОВИЧ ОСМАЕВ", "9900333e");
-    addDoc(w, "АДАМ", "9900333s");
-    addDoc(w, "ОСМАЕВ", "9900333s");
-    addDoc(w, "ЖАМАЛАЙЛОВИЧ", "9900333s");
+    addDoc(w, "рамазанов,руслан", "193398817");
     w.close(); 
 
     // 2. query
-    String querystr = args.length > 0 ? args[0] : "АДАМ,ОСМАЕВ";
+    String querystr = args.length > 0 ? args[0] : "рамазанов";
 
     // the "title" arg specifies the default field to use
     // when no field is explicitly specified in the query.
