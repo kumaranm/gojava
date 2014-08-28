@@ -141,6 +141,8 @@ public class WCLuceneIndexBuilder {
 			w.close();
 		}
 		
+		
+		
 		FSDirectory index = FSDirectory.open(new File("c:/index/" + lists[1].replace(" ",	"_").toLowerCase()));
 		
 		FuzzyQuery fq1 = new FuzzyQuery(new Term("name_data","varon"), 0, 0, 1, false);
