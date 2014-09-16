@@ -31,11 +31,11 @@ public class WCLucene {
     IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_43, analyzer);
 
     IndexWriter w = new IndexWriter(index, config);
-    addDoc(w, "рамазанов,руслан", "193398817");
+    addDoc(w, "name", "193398817");
     w.close(); 
 
     // 2. query
-    String querystr = args.length > 0 ? args[0] : "рамазанов";
+    String querystr = args.length > 0 ? args[0] : "name";
 
     // the "title" arg specifies the default field to use
     // when no field is explicitly specified in the query.

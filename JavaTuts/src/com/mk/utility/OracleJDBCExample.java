@@ -10,7 +10,7 @@ public class OracleJDBCExample
 {
 	// JDBC driver name and database URL
 	static final String JDBC_DRIVER = "oracle.jdbc.OracleDriver";
-	static final String DB_URL = "jdbc:oracle:thin:norkomdba/norkomdbastg@//lvsvmdb35.qa.paypal.com:2126/QADBAA9B";
+	static final String DB_URL = "jdbc:oracle:thin:username/password@//host:port/serviceid";
 
 	// Database credentials
 	static final String USER = "username";
