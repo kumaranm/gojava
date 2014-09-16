@@ -14,20 +14,16 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.BooleanClause.Occur;
-import org.apache.lucene.search.AutomatonQuery;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.FuzzyQuery;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.MultiPhraseQuery;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.RegexpQuery;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopScoreDocCollector;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.util.Version;
-import org.apache.lucene.util.automaton.Automaton;
-import org.apache.lucene.util.automaton.State;
 
 public class HelloLucene1 {
   public static void main(String[] args) throws IOException, ParseException {
@@ -45,15 +41,6 @@ public class HelloLucene1 {
 //    addDoc(w, "lucene for test dummies", "55320055Z");
 //    addDoc(w, "managing gigabytes", "55063554A");
 //    addDoc(w, "the art of computer science", "9900333X");
-    addDoc(w, "МОРОЗОВ Ищенко ВИКТОРОВИЧ", "9900333X");
-    addDoc(w, "МОРОЗОВ АЛЕКСАНДР ВИКТОРОВИЧ", "9900333X");
-    addDoc(w, "морозов,александр викторович", "990023X");
-    addDoc(w, "МОРОЗОВ,ВИКТОРОВИЧ АЛЕКСАНДР", "990023X");
-    addDoc(w, "ВИКТОРОВИЧ МОРОЗОВ,АЛЕКСАНДР", "990023X");
-    addDoc(w, "МОРОЗОВ,АЛЕКСАНДР", "990023X");
-    addDoc(w, "ВИКТОРОВИЧ,АЛЕКСАНДР", "990023X");
-    addDoc(w, "АНДРЕЕВ РОМАН ВЛАДИМИРОВИЧ", "992333X");
-    addDoc(w, "АНДРЕЕВ РОМАН ВИКТОРОВИЧ", "992333X");
     addDoc(w, "fname mname lname", "992333X");
     addDoc(w, "fname lname mname", "992333X");
     addDoc(w, "mname fname lname", "992333X");
@@ -66,20 +53,6 @@ public class HelloLucene1 {
     addDoc(w, "sname dname", "992333X");
     addDoc(w, "fname lname jname", "992333X");
     addDoc(w, "fnamemname hfg", "992333X");
-    addDoc(w, "ALOARDI Carlo Giovanni", "322");
-    addDoc(w, "ALOARDI Carlo", "2233");
-    addDoc(w, "ALOARDI Giovanni Carlo", "2233");
-    addDoc(w, "ALOARDI,Carlo,Giovanni", "2233");
-    addDoc(w, "Carlo ALOARDI Giovanni", "2233");
-    addDoc(w, "Carlo Giovanni ALOARDI", "2233");
-    addDoc(w, "Giovanni ALOARDI Carlo", "2233");
-    addDoc(w, "Giovanni Carlo ALOARDI", "2233");
-    addDoc(w, "Giovanny Carlo ALOARDy", "2233");
-    addDoc(w, "Giovanny Carlo ALOARDi", "2233");
-    addDoc(w, "Giovanny Giovanni", "2233");
-    addDoc(w, "Carlo austin Giovanni", "2233");
-    addDoc(w, "Giovanni Carlo ALOARDI KIM", "2233");
-    addDoc(w, "Giovanni Carlo ALOARds KIM", "2233");
 //    addDoc(w, "the great game of fname which comes lname after mname", "992333X");
     w.close();
 
@@ -108,12 +81,9 @@ public class HelloLucene1 {
     mpq1.add(new Term[] {t5, t4}, 1);
 //    mpq1.setSlop(2); 
     
-//    FuzzyQuery fq1 = new FuzzyQuery(new Term("title","fndme"), 1, 0, 1, false);
-//    FuzzyQuery fq2 = new FuzzyQuery(new Term("title","mndme"), 1, 0, 1, false);
-//    FuzzyQuery fq3 = new FuzzyQuery(new Term("title","lnaae"), 1, 0, 1, false);
-    FuzzyQuery fq1 = new FuzzyQuery(new Term("title","aloardi"), 1, 0, 1, false);
-    FuzzyQuery fq2 = new FuzzyQuery(new Term("title","carlo"), 1, 0, 1, false);
-    FuzzyQuery fq3 = new FuzzyQuery(new Term("title","giovanni"), 1, 0, 1, false);
+    FuzzyQuery fq1 = new FuzzyQuery(new Term("title","fndme"), 1, 0, 1, false);
+    FuzzyQuery fq2 = new FuzzyQuery(new Term("title","mndme"), 1, 0, 1, false);
+    FuzzyQuery fq3 = new FuzzyQuery(new Term("title","lnaae"), 1, 0, 1, false);
 
 
     BooleanQuery qry = new BooleanQuery();

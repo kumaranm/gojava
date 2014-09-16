@@ -25,7 +25,7 @@ public class ExcelUtils
 		{
 			// Create a FileInputStream that will be use to read the excel file.
 			fis = new FileInputStream(fileName);
-			 org.apache.poi.hssf.record.crypto.Biff8EncryptionKey.setCurrentUserPassword("paypalbasic");
+			 org.apache.poi.hssf.record.crypto.Biff8EncryptionKey.setCurrentUserPassword("test");
 			// Create an excel workbook from the file system.
 			HSSFWorkbook workbook = new HSSFWorkbook(fis);
 			// Get the first sheet on the workbook.
@@ -93,7 +93,7 @@ public class ExcelUtils
 		{
 			// Create a FileInputStream that will be use to read the excel file.
 			fis = new FileInputStream(fileName);
-			 org.apache.poi.hssf.record.crypto.Biff8EncryptionKey.setCurrentUserPassword("paypalbasic");
+			 org.apache.poi.hssf.record.crypto.Biff8EncryptionKey.setCurrentUserPassword("test");
 			// Create an excel workbook from the file system.
 			HSSFWorkbook workbook = new HSSFWorkbook(fis);
 			// Get the first sheet on the workbook.
@@ -116,9 +116,9 @@ public class ExcelUtils
 	
 	public static void main(String[] args) throws IOException
 	{
-		System.out.println(getRowCount("C:\\Kumaran\\Compliance\\3.Analysis\\nls custom list\\Copy of Copy of 基本データ20131201 - Copy.xls", 0));
+		System.out.println(getRowCount("filename.xls", 0));
 		
-		ArrayList<String[]> readFromExcel = readFromExcel("C:\\Kumaran\\Compliance\\3.Analysis\\nls custom list\\Copy of Copy of 基本データ20131201 - Copy.xls", 0);
+		ArrayList<String[]> readFromExcel = readFromExcel("filename.xls", 0);
         System.out.println("Country List\n"+readFromExcel);
 	}
 }
