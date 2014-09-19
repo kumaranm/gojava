@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
+<question id="1">  
+    <answers>  
+        <answername>java is a programming language</answername>  
+        <id>101</id>  
+        <postedby>ravi</postedby>  
+        <email>test@gmail.com</email>
+    </answers>  
+    <answers>  
+        <answername>java is a platform</answername>  
+        <id>102</id>  
+        <postedby>john</postedby>  
+    </answers>  
+    <questionname>What is java?</questionname>  
+    <address>asdasdfasds</address>
+</question> 
