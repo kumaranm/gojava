@@ -7,7 +7,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="resources"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
@@ -18,5 +18,27 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/jars"/>
+	<classpathentry kind="lib" path="jars/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="jars/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="jars/fluent-hc-4.3.4.jar"/>
+	<classpathentry kind="lib" path="jars/httpclient-4.3.4.jar"/>
+	<classpathentry kind="lib" path="jars/httpclient-cache-4.3.4.jar"/>
+	<classpathentry kind="lib" path="jars/httpcore-4.3.2.jar"/>
+	<classpathentry kind="lib" path="jars/httpmime-4.3.4.jar"/>
+	<classpathentry kind="lib" path="jars/jxl.jar"/>
+	<classpathentry kind="lib" path="jars/lucene-analyzers-common-4.3.0-sources.jar"/>
+	<classpathentry kind="lib" path="jars/lucene-analyzers-common-4.3.0.jar"/>
+	<classpathentry kind="lib" path="jars/lucene-analyzers-common-4.7.0.jar"/>
+	<classpathentry kind="lib" path="jars/lucene-core-4.3.0-sources.jar"/>
+	<classpathentry kind="lib" path="jars/lucene-core-4.3.0.jar"/>
+	<classpathentry kind="lib" path="jars/lucene-core-4.7.0.jar"/>
+	<classpathentry kind="lib" path="jars/lucene-queries-4.3.0-sources.jar"/>
+	<classpathentry kind="lib" path="jars/lucene-queries-4.3.0.jar"/>
+	<classpathentry kind="lib" path="jars/lucene-queryparser-4.3.0-sources.jar"/>
+	<classpathentry kind="lib" path="jars/lucene-queryparser-4.3.0.jar"/>
+	<classpathentry kind="lib" path="jars/lucene-queryparser-4.7.0.jar"/>
+	<classpathentry kind="lib" path="jars/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="jars/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="jars/poi-3.10-FINAL-20140208.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
