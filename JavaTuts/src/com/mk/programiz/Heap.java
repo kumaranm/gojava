@@ -88,9 +88,6 @@ public class Heap {
 		// array.add(4);
 
 		Heap h = new Heap();
-		/*
-		 * for (int i = size / 2 - 1; i >= 0; i--) { h.heapify(array, i); }
-		 */
 		h.insert(array, 1);
 		h.insert(array, 2);
 		h.insert(array, 3);
