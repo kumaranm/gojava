@@ -2,17 +2,17 @@ package com.mk.programiz;
 // Deque implementation in Java
 
 class Deque {
-	
-	static final int MAX = 100;
+
+	// static final int MAX = 100;
 	int arr[];
 	int front;
 	int rear;
 	int size;
 
 	public Deque(int size) {
-		arr = new int[MAX];
+		arr = new int[size];
 		front = -1;
-		rear = 0;
+		rear = -1;
 		this.size = size;
 	}
 
@@ -35,11 +35,11 @@ class Deque {
 			rear = 0;
 		}
 
-		else if (front == 0)
+		else if (front == 0) {
 			front = size - 1;
-
-		else
+		} else {
 			front = front - 1;
+		}
 
 		arr[front] = key;
 	}
@@ -55,12 +55,11 @@ class Deque {
 			rear = 0;
 		}
 
-		else if (rear == size - 1)
+		else if (rear == size - 1) {
 			rear = 0;
-
-		else
+		} else {
 			rear = rear + 1;
-
+		}
 		arr[rear] = key;
 	}
 
@@ -90,10 +89,12 @@ class Deque {
 		if (front == rear) {
 			front = -1;
 			rear = -1;
-		} else if (rear == 0)
+		} else if (rear == 0) {
 			rear = size - 1;
-		else
+
+		} else {
 			rear = rear - 1;
+		}
 	}
 
 	int getFront() {

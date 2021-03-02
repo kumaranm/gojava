@@ -16,7 +16,6 @@ public class DFSGraph {
 
 		for (int i = 0; i < vertices; i++) {
 			adjList[i] = new LinkedList<Integer>();
-
 		}
 	}
 
@@ -35,25 +34,25 @@ public class DFSGraph {
 			if (!visited[n]) {
 				DFS(n);
 			}
-			System.out.println();
+//			System.out.println();
 		}
 	}
 
 	// BFS algorithm
-	void BFS(int s) {
+	void BFS(int vertice) {
 
 		boolean visited[] = new boolean[V];
 
 		LinkedList<Integer> queue = new LinkedList();
 
-		visited[s] = true;
-		queue.add(s);
+		visited[vertice] = true;
+		queue.add(vertice);
 
 		while (queue.size() != 0) {
-			s = queue.poll();
-			System.out.print(s + " ");
+			vertice = queue.poll();
+			System.out.print(vertice + " ");
 
-			Iterator<Integer> i = adjList[s].listIterator();
+			Iterator<Integer> i = adjList[vertice].listIterator();
 			while (i.hasNext()) {
 				int n = i.next();
 				if (!visited[n]) {
@@ -65,14 +64,19 @@ public class DFSGraph {
 	}
 
 	public static void main(String[] args) {
-		DFSGraph g = new DFSGraph(4);
+		DFSGraph g = new DFSGraph(5);
 
 		g.addEdge(0, 1);
 		g.addEdge(0, 2);
+		g.addEdge(0, 3);
 		g.addEdge(1, 2);
-		g.addEdge(2, 3);
+		g.addEdge(2, 4);
 
+		System.out.print("DFS -> ");
 		g.DFS(0);
+		
+		System.out.print("\nBFS -> ");
+		g.BFS(0);
 
 	}
 

@@ -15,7 +15,7 @@ public class FullBinaryTree {
 			return true;
 		}
 
-		// if single node
+		// if leaf node
 		if (node.left == null && node.right == null) {
 			return true;
 		}

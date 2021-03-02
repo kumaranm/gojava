@@ -7,6 +7,7 @@ public class BubbleSort {
 	/**
 	 * Compare Adjacent elements and swap if not in order Best case - O(n) -
 	 * array already sorted Avg/ Worst Case - O(n squared)
+	 * Largest element in correct position at end of array
 	 * 
 	 * @param array
 	 */

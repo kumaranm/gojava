@@ -108,7 +108,7 @@ public class CQueue {
 		q.enqueue(10);
 		q.enqueue(11);
 		q.display();
-		
+
 		q.dequeue();
 		q.display();
 	}

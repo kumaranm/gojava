@@ -2,6 +2,11 @@ package com.mk.programiz;
 
 public class HeapSort {
 
+	/**
+	 * n log n
+	 * 
+	 * @param arr
+	 */
 	public void sort(int arr[]) {
 		int n = arr.length;
 
@@ -10,8 +15,11 @@ public class HeapSort {
 			heapify(arr, n, i);
 		}
 
-		// Heap sort
+		System.out.println("Before Sort - ");
+		printArray(arr);
+		// Heap sort 
 		for (int i = n - 1; i >= 0; i--) {
+			//move root to last element and reduce size
 			int temp = arr[0];
 			arr[0] = arr[i];
 			arr[i] = temp;
